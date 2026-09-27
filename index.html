@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>退職後の健康保険 比較シミュレーター | 国民健康保険 vs 任意継続</title>
+<meta name="description" content="退職時の給与・前年の年収・年齢・家族の人数を入れるだけで、退職後の「国民健康保険」と「任意継続」の保険料を月額換算で比較できる無料シミュレーターです。どちらが安いかの目安がすぐ分かります。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://webtools-labs.com/taishokugo-hoken-hikaku-keisan/">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2370765779014113" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NKK5TXCQEK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NKK5TXCQEK');
+</script>
+<script>
+(function () {
+  var fired = false;
+  function fireOnce() {
+    if (fired) return;
+    fired = true;
+    if (typeof gtag === 'function') gtag('event', 'tool_used', { tool_name: document.title });
+  }
+  document.addEventListener('input', fireOnce, true);
+  document.addEventListener('change', fireOnce, true);
+})();
+</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f766e'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='white' font-family='sans-serif'%3E%EF%BF%A5%3C/text%3E%3C/svg%3E">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="webtools-labs">
+<meta property="og:title" content="退職後の健康保険 比較シミュレーター | 国民健康保険 vs 任意継続">
+<meta property="og:description" content="退職時の給与・前年の年収・年齢・家族の人数から、国民健康保険と任意継続の保険料を月額換算で比較できます。">
+<meta property="og:url" content="https://webtools-labs.com/taishokugo-hoken-hikaku-keisan/">
+<meta property="og:image" content="https://webtools-labs.com/taishokugo-hoken-hikaku-keisan/og-image.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="退職後の健康保険 比較シミュレーター">
+<meta name="twitter:description" content="国民健康保険と任意継続、どちらが安いかを月額換算で比較できる無料ツール。">
+<meta name="twitter:image" content="https://webtools-labs.com/taishokugo-hoken-hikaku-keisan/og-image.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "退職後の健康保険 比較シミュレーター",
+  "url": "https://webtools-labs.com/taishokugo-hoken-hikaku-keisan/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "description": "退職時の給与・前年の年収・年齢・家族の人数から、国民健康保険と任意継続の保険料を月額換算で比較できる無料ツール。",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" },
+  "inLanguage": "ja"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "国民健康保険と任意継続、そもそも何が違いますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "国民健康保険はお住まいの市区町村が運営する保険で、前年の所得にもとづいて保険料が決まります。任意継続は、退職前に加入していた健康保険（協会けんぽ・健康保険組合）に、退職後も最長2年間そのまま加入し続ける制度です。保険料の計算方法がまったく異なるため、人によってどちらが安いかが変わります。" }
+    },
+    {
+      "@type": "Question",
+      "name": "扶養家族がいる場合はどちらが有利になりやすいですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "任意継続は、在職中と同じように扶養家族の分の保険料が別途かからないのに対し、国民健康保険は世帯の加入者数に応じて均等割額が人数分加算されます。そのため、扶養家族が多い世帯ほど任意継続が有利になりやすい傾向があります。" }
+    },
+    {
+      "@type": "Question",
+      "name": "任意継続の保険料には上限があると聞きました。本当ですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "はい。任意継続の保険料は「退職時の標準報酬月額」と「協会けんぽ全被保険者の平均標準報酬月額」のいずれか低い方を基準に計算され、令和8年度はこの上限が32万円です。そのため、退職前の給与が高かった方ほど、任意継続を選ぶと国民健康保険より割安になるケースがあります。" }
+    },
+    {
+      "@type": "Question",
+      "name": "手続きの期限はいつまでですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "任意継続は退職日の翌日から20日以内に協会けんぽ（または加入していた健康保険組合）へ申請が必要です。1日でも過ぎると原則として任意継続できなくなるため注意してください。国民健康保険は退職日の翌日から14日以内にお住まいの市区町村役場で手続きします。" }
+    },
+    {
+      "@type": "Question",
+      "name": "任意継続は一度選んだら2年間やめられませんか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "令和4年1月の制度改正により、本人の希望があれば「資格喪失申出書」を提出することで、2年間を待たずに任意継続をやめて国民健康保険等に切り替えられるようになりました。申出をした月の翌月1日付けで資格を喪失します。" }
+    },
+    {
+      "@type": "Question",
+      "name": "任意継続でも傷病手当金はもらえますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "いいえ、任意継続被保険者の期間中に新たに発症した病気・ケガについては、原則として傷病手当金は支給されません（国民健康保険も同様です）。ただし、退職前から継続して受給していた傷病手当金は、資格喪失後も条件を満たせば継続して受け取れる場合があります。詳しくは傷病手当金計算ツールもあわせてご確認ください。" }
+    }
+  ]
+}
+</script>
+<style>
+:root {
+  --bg: #ffffff;
+  --surface-2: #f7f7f7;
+  --ink: #1a1a1a;
+  --muted: #767676;
+  --line: #e3e3e3;
+  --accent: #0f766e;
+  --best-bg: #f0f8f6;
+  --warn-bg: #fff7ed;
+  --warn-ink: #9a5b00;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.page { max-width: 720px; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+header.masthead { margin-bottom: 1.5rem; }
+h1 {
+  font-weight: 700;
+  font-size: clamp(1.4rem, 4.5vw, 1.7rem);
+  margin: 0 0 0.7rem;
+  letter-spacing: 0.01em;
+}
+p.lede { color: var(--muted); margin: 0; max-width: 60ch; font-size: 0.95rem; }
+.updated-note { display: block; margin-top: 0.9rem; font-size: 0.78rem; color: var(--muted); }
+
+.notice-box {
+  background: var(--warn-bg); color: var(--warn-ink); border-radius: 8px;
+  padding: 0.9rem 1.1rem; font-size: 0.85rem; margin-bottom: 2rem;
+}
+
+section { margin-bottom: 2.5rem; }
+h2 { font-size: 1.05rem; font-weight: 700; margin: 0 0 1rem; }
+
+.field-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem; }
+.field { flex: 1; min-width: 180px; }
+.field label { display: block; font-size: 0.83rem; color: var(--muted); margin-bottom: 0.35rem; }
+.field input[type="number"], .field select {
+  width: 100%; font-variant-numeric: tabular-nums; font-size: 1.05rem; font-family: inherit;
+  padding: 0.55rem 0.7rem; border: 1px solid var(--line); border-radius: 6px;
+  background: var(--bg); color: var(--ink);
+}
+.field input:focus, .field select:focus { outline: none; border-color: var(--accent); }
+
+.summary-cards { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
+.summary-card {
+  flex: 1; min-width: 180px; background: var(--surface-2); border-radius: 10px;
+  padding: 1rem 1.2rem; border: 2px solid transparent;
+}
+.summary-card.best { background: var(--best-bg); border-color: var(--accent); }
+.summary-card .label { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.3rem; }
+.summary-card .value { font-size: 1.4rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.summary-card .sub { font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; }
+
+table.compare { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+table.compare th, table.compare td {
+  padding: 0.55rem 0.5rem; text-align: right; border-bottom: 1px solid var(--line); vertical-align: top;
+}
+table.compare th:first-child, table.compare td:first-child { text-align: left; }
+table.compare thead th { color: var(--muted); font-weight: 500; font-size: 0.78rem; }
+table.compare td.num { font-variant-numeric: tabular-nums; }
+tr.total td { font-weight: 700; }
+tr.total { background: var(--best-bg); }
+
+.ref-table { overflow-x: auto; }
+.ref-table table { width: 100%; border-collapse: collapse; font-size: 0.86rem; min-width: 460px; }
+.ref-table th, .ref-table td { padding: 0.5rem 0.5rem; border-bottom: 1px solid var(--line); text-align: left; }
+.ref-table td.num { font-variant-numeric: tabular-nums; text-align: right; }
+.ref-table tr.best td { background: var(--best-bg); font-weight: 700; }
+
+.disclaimer { font-size: 0.78rem; color: var(--muted); margin-top: 1rem; }
+
+.share-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.1rem; }
+.share-btn {
+  display: inline-flex; align-items: center; padding: 0.5rem 1rem; border-radius: 999px;
+  color: #fff; text-decoration: none; font-size: 0.82rem; font-weight: 700;
+}
+.share-btn:hover { opacity: 0.85; }
+.share-x { background: #000; }
+.share-line { background: #06c755; }
+.share-fb { background: #1877f2; }
+.share-hatena { background: #00a4de; }
+
+.ad-slot { margin: 2.5rem 0; text-align: center; min-height: 100px; }
+
+.pr-box {
+  border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 10px;
+  padding: 1.2rem 1.3rem; margin: 2.5rem 0; background: var(--best-bg);
+}
+.pr-box .pr-label {
+  display: inline-flex; align-items: center; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.04em;
+  color: #fff; background: var(--accent); border-radius: 999px;
+  padding: 0.2rem 0.7rem; margin-bottom: 0.8rem;
+}
+.pr-box p.pr-lede { color: var(--ink); font-size: 0.92rem; margin: 0 0 1rem; max-width: none; line-height: 1.7; }
+.pr-box .pr-banner { text-align: center; }
+.pr-box .pr-cta {
+  display: inline-block; background: var(--accent); color: #fff; font-weight: 700;
+  font-size: 0.85rem; padding: 0.6rem 1.3rem; border-radius: 999px; text-decoration: none;
+}
+.pr-box .pr-cta:hover { opacity: 0.85; }
+
+.contact-box textarea {
+  width: 100%; min-height: 6rem; font-family: inherit; font-size: 0.92rem;
+  padding: 0.7rem; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink);
+  resize: vertical; margin-bottom: 0.6rem;
+}
+.contact-box input[type="email"] {
+  width: 100%; font-family: inherit; font-size: 0.92rem;
+  padding: 0.6rem 0.7rem; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink);
+  margin-bottom: 0.6rem;
+}
+.contact-box textarea:focus, .contact-box input:focus { outline: none; border-color: var(--accent); }
+.contact-box button {
+  font-family: inherit; font-weight: 700; font-size: 0.9rem; padding: 0.6rem 1.4rem;
+  border: none; border-radius: 6px; background: var(--accent); color: #fff; cursor: pointer;
+}
+.contact-box button:disabled { opacity: 0.5; cursor: not-allowed; }
+.contact-status { font-size: 0.85rem; margin-top: 0.6rem; }
+.contact-status.ok { color: var(--accent); }
+.contact-status.err { color: #b91c1c; }
+
+footer.site-footer {
+  margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line);
+  font-size: 0.78rem; color: var(--muted);
+}
+footer.site-footer p { margin: 0 0 0.5rem; }
+footer.site-footer a { color: var(--accent); }
+
+.faq-item { border-bottom: 1px solid var(--line); padding: 0.9rem 0; }
+.faq-item:last-child { border-bottom: none; }
+.faq-item summary {
+  cursor: pointer; font-weight: 700; font-size: 0.92rem; list-style: none;
+  position: relative; padding-right: 1.6rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+'; position: absolute; right: 0; top: 0; color: var(--accent); font-weight: 700; font-size: 1.1rem;
+}
+.faq-item[open] summary::after { content: '−'; }
+.faq-item p { margin: 0.7rem 0 0; color: var(--muted); font-size: 0.88rem; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="masthead">
+    <h1>退職後の健康保険 比較シミュレーター</h1>
+    <p class="lede">退職時の給与・前年の年収・年齢・家族の人数を入れるだけで、退職後の「国民健康保険」と「任意継続」の保険料を月額換算で比較します。</p>
+    <span class="updated-note">料率 最終確認日: 2026年9月27日（協会けんぽ・東京都特別区の令和8年度料率にもとづく）</span>
+  </header>
+
+  <div class="notice-box">
+    ⚠️ 国民健康保険の保険料率は<strong>お住まいの市区町村によって大きく異なります</strong>。本ツールは目安として東京都特別区（23区）の令和8年度料率を使用した簡易計算です。任意継続の保険料率も協会けんぽの都道府県ごとに異なるため、ここでは東京都の料率を使用しています。正確な金額は、お住まいの市区町村の国民健康保険窓口・加入している健康保険組合にご確認ください。
+  </div>
+
+  <section>
+    <h2>退職後は健康保険に入り続ける必要がある</h2>
+    <p>会社を退職すると、それまで加入していた健康保険（協会けんぽ・健康保険組合）の被保険者資格を失います。日本は国民皆保険のため、退職後も何らかの公的医療保険に加入し続ける必要があり、主な選択肢が「国民健康保険への切り替え」と「元の健康保険に最長2年間そのまま加入し続ける任意継続」の2つです。</p>
+    <p>どちらも保障される医療の内容（3割負担など）はほぼ同じですが、保険料の計算方法がまったく異なるため、退職前の給与・前年の所得・扶養家族の有無によって、どちらが安くなるかが人によって変わります。</p>
+  </section>
+
+  <section>
+    <h2>保険料を比較する</h2>
+    <div class="field-row">
+      <div class="field">
+        <label for="monthlyWage">退職時の給与（月額・円）</label>
+        <input type="number" id="monthlyWage" min="0" step="10000" value="300000">
+      </div>
+      <div class="field">
+        <label for="annualIncome">前年の年収（額面・円）</label>
+        <input type="number" id="annualIncome" min="0" step="100000" value="4000000">
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label for="ageGroup">年齢区分</label>
+        <select id="ageGroup">
+          <option value="under40">40歳未満</option>
+          <option value="over40">40〜64歳（介護保険料あり）</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="household">国保に加入する家族の人数（本人を含む）</label>
+        <input type="number" id="household" min="1" step="1" value="1">
+      </div>
+    </div>
+
+    <div class="summary-cards" id="summaryCards"></div>
+
+    <div style="overflow-x:auto">
+      <table class="compare">
+        <thead>
+          <tr><th>項目</th><th class="num">任意継続</th><th class="num">国民健康保険</th></tr>
+        </thead>
+        <tbody id="resultBody"></tbody>
+      </table>
+    </div>
+    <p class="disclaimer">任意継続は「退職時の標準報酬月額」と「協会けんぽ全被保険者の平均標準報酬月額（令和8年度は32万円）」の低い方に、東京都の健康保険料率＋子ども・子育て支援金率（＋40〜64歳は介護保険料率）をかけて計算しています（全額自己負担）。国民健康保険は前年の年収から給与所得控除・基礎控除43万円を引いた金額をもとに、東京都特別区の医療分・支援金分・介護分・子ども子育て支援金分の令和8年度料率で計算し、年額を12で割った月額目安を表示しています。</p>
+    <div class="share-row" id="shareRow">
+      <a class="share-btn share-x" id="shareX" href="#" target="_blank" rel="noopener">𝕏でシェア</a>
+      <a class="share-btn share-line" id="shareLine" href="#" target="_blank" rel="noopener">LINEで送る</a>
+      <a class="share-btn share-fb" id="shareFb" href="#" target="_blank" rel="noopener">Facebookでシェア</a>
+      <a class="share-btn share-hatena" id="shareHatena" href="#" target="_blank" rel="noopener">はてブする</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>国民健康保険と任意継続、主な違いの早見表</h2>
+    <div class="ref-table">
+      <table>
+        <thead><tr><th>項目</th><th>任意継続</th><th>国民健康保険</th></tr></thead>
+        <tbody>
+          <tr><td>保険料の基準</td><td>退職時の標準報酬月額（上限32万円）</td><td>前年の所得＋世帯の加入者数</td></tr>
+          <tr><td>扶養家族の保険料</td><td>かからない</td><td>加入者数に応じて加算</td></tr>
+          <tr><td>加入できる期間</td><td>最長2年間</td><td>次の保険に入るまで継続</td></tr>
+          <tr><td>手続きの期限</td><td>退職日の翌日から20日以内</td><td>退職日の翌日から14日以内</td></tr>
+          <tr><td>途中でやめられるか</td><td>本人の申出で可（令和4年改正）</td><td>就職等で他の保険に入れば自動的に脱退</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="disclaimer">保障される医療の自己負担割合（原則3割）自体はどちらも変わりません。傷病手当金・出産手当金は、任意継続・国民健康保険のどちらでも新規の支給対象外です。</p>
+  </section>
+
+  <section>
+    <h2>計算例: 月給30万円・前年年収400万円・40歳未満・本人のみの場合</h2>
+    <p>デフォルトで入力されている条件で計算してみます。</p>
+    <div class="ref-table">
+      <table>
+        <thead><tr><th>項目</th><th class="num">任意継続</th><th class="num">国民健康保険</th></tr></thead>
+        <tbody>
+          <tr><td>算定の基準</td><td class="num">標準報酬月額30万円</td><td class="num">給与所得217.6万円（400万円−給与所得控除−基礎控除43万円）</td></tr>
+          <tr class="best"><td>月額の目安</td><td class="num">30,240円</td><td class="num">26,132円</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="disclaimer">この条件では国民健康保険の方が月あたり約4,100円安い計算です。ただし前年の年収が高い方・扶養家族が多い方ほど、任意継続が有利になる傾向があります。ご自身の条件は上の計算フォームですぐ確認できます。</p>
+  </section>
+
+  <div class="pr-box">
+    <span class="pr-label">あわせて確認</span>
+    <p class="pr-lede">退職の準備を進めている方は、有給消化のスケジュールや退職金の手取り、失業保険の目安もあわせて確認しておくとスムーズです。</p>
+    <div class="pr-banner">
+      <a href="https://webtools-labs.com/taishoku-yukyu-keisan/" class="pr-cta">退職時の有給消化シミュレーター</a>
+      <a href="https://webtools-labs.com/taishokukin-zei-keisan/" class="pr-cta" style="margin-left:0.6rem;">退職金の税金計算ツール</a>
+      <a href="https://webtools-labs.com/shitsugyo-hoken-keisan/" class="pr-cta" style="margin-left:0.6rem;">失業保険シミュレーター</a>
+    </div>
+  </div>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-2370765779014113"
+      data-ad-slot="3021985784"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <section>
+    <h2>よくある質問</h2>
+    <details class="faq-item">
+      <summary>国民健康保険と任意継続、そもそも何が違いますか？</summary>
+      <p>国民健康保険はお住まいの市区町村が運営する保険で、前年の所得にもとづいて保険料が決まります。任意継続は、退職前に加入していた健康保険（協会けんぽ・健康保険組合）に、退職後も最長2年間そのまま加入し続ける制度です。保険料の計算方法がまったく異なるため、人によってどちらが安いかが変わります。</p>
+    </details>
+    <details class="faq-item">
+      <summary>扶養家族がいる場合はどちらが有利になりやすいですか？</summary>
+      <p>任意継続は、在職中と同じように扶養家族の分の保険料が別途かからないのに対し、国民健康保険は世帯の加入者数に応じて均等割額が人数分加算されます。そのため、扶養家族が多い世帯ほど任意継続が有利になりやすい傾向があります。</p>
+    </details>
+    <details class="faq-item">
+      <summary>任意継続の保険料には上限があると聞きました。本当ですか？</summary>
+      <p>はい。任意継続の保険料は「退職時の標準報酬月額」と「協会けんぽ全被保険者の平均標準報酬月額」のいずれか低い方を基準に計算され、令和8年度はこの上限が32万円です。そのため、退職前の給与が高かった方ほど、任意継続を選ぶと国民健康保険より割安になるケースがあります。</p>
+    </details>
+    <details class="faq-item">
+      <summary>手続きの期限はいつまでですか？</summary>
+      <p>任意継続は退職日の翌日から20日以内に協会けんぽ（または加入していた健康保険組合）へ申請が必要です。1日でも過ぎると原則として任意継続できなくなるため注意してください。国民健康保険は退職日の翌日から14日以内にお住まいの市区町村役場で手続きします。</p>
+    </details>
+    <details class="faq-item">
+      <summary>任意継続は一度選んだら2年間やめられませんか？</summary>
+      <p>令和4年1月の制度改正により、本人の希望があれば「資格喪失申出書」を提出することで、2年間を待たずに任意継続をやめて国民健康保険等に切り替えられるようになりました。申出をした月の翌月1日付けで資格を喪失します。</p>
+    </details>
+    <details class="faq-item">
+      <summary>任意継続でも傷病手当金はもらえますか？</summary>
+      <p>いいえ、任意継続被保険者の期間中に新たに発症した病気・ケガについては、原則として傷病手当金は支給されません（国民健康保険も同様です）。ただし、退職前から継続して受給していた傷病手当金は、資格喪失後も条件を満たせば継続して受け取れる場合があります。詳しくは<a href="https://webtools-labs.com/shoubyou-teate-keisan/">傷病手当金計算ツール</a>もあわせてご確認ください。</p>
+    </details>
+  </section>
+
+  <section>
+    <h2>あわせて読みたい</h2>
+    <p class="lede">保険料の比較と合わせて、<a href="https://webtools-labs.com/taishokukin-zei-keisan/">退職金の税金計算ツール</a>で手取り退職金を、<a href="https://webtools-labs.com/shitsugyo-hoken-keisan/">失業保険（基本手当）シミュレーター</a>で退職後の収入の目安も確認しておくと、退職後の家計全体が見通しやすくなります。</p>
+  </section>
+
+  <section class="contact-box">
+    <h2>ご意見・追加してほしい機能</h2>
+    <p class="lede" style="margin-bottom:0.9rem;">気づいたことや、あったら便利な機能があれば教えてください。</p>
+    <form id="contactForm">
+      <input type="email" id="contactEmail" placeholder="返信が必要な場合はメールアドレス（任意）">
+      <textarea id="contactMessage" placeholder="ご意見・ご要望をどうぞ" required></textarea>
+      <button type="submit" id="contactSubmit">送信する</button>
+      <p class="contact-status" id="contactStatus"></p>
+    </form>
+  </section>
+
+  <footer class="site-footer">
+    <p>本ツールの計算結果は東京都特別区の令和8年度料率にもとづく概算であり、正確性を保証するものではありません。実際の保険料はお住まいの市区町村・加入する健康保険組合により異なります。正確な金額は市区町村の国民健康保険窓口・健康保険組合に必ずご確認ください。</p>
+    <p>あわせて使える：
+      <a href="https://webtools-labs.com/furima-hikaku-keisan/">フリマ手数料計算・比較ツール</a> ／
+      <a href="https://webtools-labs.com/furima-hasso-hikaku/">フリマ配送方法・送料比較ツール</a> ／
+      <a href="https://webtools-labs.com/furima-tedori-simulator/">フリマ手取りシミュレーター</a> ／
+      <a href="https://webtools-labs.com/yukyu-hiyou-keisan/">有給休暇 付与日数計算ツール</a> ／
+      <a href="https://webtools-labs.com/revolving-risoku-keisan/">リボ払い・分割払い 実質利息計算ツール</a> ／
+      <a href="https://webtools-labs.com/taishoku-yukyu-keisan/">退職時の有給消化シミュレーター</a> ／
+      <a href="https://webtools-labs.com/fuyou-no-kabe-keisan/">扶養の壁チェッカー</a> ／
+      <a href="https://webtools-labs.com/tedori-keisan/">手取り計算ツール</a> ／
+      <a href="https://webtools-labs.com/taishokukin-zei-keisan/">退職金の税金計算ツール</a> ／
+      <a href="https://webtools-labs.com/sankyu-ikuji-teate-keisan/">産休・育休手当金シミュレーター</a> ／
+      <a href="https://webtools-labs.com/zangyodai-keisan/">残業代計算ツール</a> ／
+      <a href="https://webtools-labs.com/shitsugyo-hoken-keisan/">失業保険（基本手当）シミュレーター</a> ／
+      <a href="https://webtools-labs.com/jikyu-nenshu-keisan/">時給から年収・月収を計算</a> ／
+      <a href="https://webtools-labs.com/yubin-kitte-keisan/">郵便物の切手代早見表</a> ／
+      <a href="https://webtools-labs.com/bonus-tedori-keisan/">賞与手取り計算ツール</a> ／
+      <a href="https://webtools-labs.com/shoubyou-teate-keisan/">傷病手当金計算ツール</a> ／
+      <a href="https://webtools-labs.com/juminzei-keisan/">住民税計算ツール</a> ／
+      <a href="https://webtools-labs.com/tsukin-teate-keisan/">通勤手当の非課税限度額計算ツール</a> ／
+      <a href="https://webtools-labs.com/tedori-gyakusan-keisan/">手取りから逆算する年収計算ツール</a> ／
+      <a href="https://webtools-labs.com/shakaihoken-uchiwake-keisan/">給与の社会保険料 内訳計算ツール</a> ／
+      <a href="https://webtools-labs.com/fukugyo-shinkoku-keisan/">副業の確定申告 要否チェッカー</a> ／
+      <a href="https://webtools-labs.com/nencho-kanpu-keisan/">年末調整 還付金シミュレーター</a> ／
+      <a href="https://webtools-labs.com/iryouhi-koujo-keisan/">医療費控除 計算ツール</a>
+    </p>
+    <p>当サイトは広告を掲載する場合があります。</p>
+    <p><a href="https://webtools-labs.com/about/">運営者情報</a> ／ <a href="https://webtools-labs.com/privacy/">プライバシーポリシー</a></p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  function yen(n) { return Math.round(n).toLocaleString('ja-JP') + '円'; }
+
+  function salaryDeduction(income) {
+    if (income <= 2200000) return 740000;
+    if (income <= 3600000) return Math.round(income * 0.3 + 80000);
+    if (income <= 6600000) return Math.round(income * 0.2 + 440000);
+    if (income <= 8500000) return Math.round(income * 0.1 + 1100000);
+    return 1950000;
+  }
+
+  function ninikeizoku(monthlyWage, ageGroup) {
+    var capped = Math.min(Math.max(0, monthlyWage), 320000);
+    var rate = 0.0985 + 0.0023;
+    if (ageGroup === 'over40') rate += 0.0162;
+    return Math.round(capped * rate);
+  }
+
+  function kokuho(annualIncome, ageGroup, householdSize) {
+    var income = Math.max(0, annualIncome);
+    var salaryIncome = Math.max(0, income - salaryDeduction(income));
+    var base = Math.max(0, salaryIncome - 430000);
+    var iryo = Math.min(base * 0.0751 + 47600 * householdSize, 670000);
+    var shien = Math.min(base * 0.0280 + 17600 * householdSize, 260000);
+    var kaigo = ageGroup === 'over40' ? Math.min(base * 0.0243 + 17800, 170000) : 0;
+    var kosodate = Math.min(base * 0.0027 + 1873 * householdSize, 30000);
+    var annualTotal = Math.round(iryo) + Math.round(shien) + Math.round(kaigo) + Math.round(kosodate);
+    return {
+      salaryIncome: salaryIncome, base: base,
+      iryo: Math.round(iryo), shien: Math.round(shien), kaigo: Math.round(kaigo), kosodate: Math.round(kosodate),
+      annualTotal: annualTotal, monthlyAvg: Math.round(annualTotal / 12)
+    };
+  }
+
+  var monthlyWageInput = document.getElementById('monthlyWage');
+  var annualIncomeInput = document.getElementById('annualIncome');
+  var ageGroupInput = document.getElementById('ageGroup');
+  var householdInput = document.getElementById('household');
+  var summaryCards = document.getElementById('summaryCards');
+  var resultBody = document.getElementById('resultBody');
+  var shareX = document.getElementById('shareX');
+  var shareLine = document.getElementById('shareLine');
+  var shareFb = document.getElementById('shareFb');
+  var shareHatena = document.getElementById('shareHatena');
+
+  function setShareLinks(text, url) {
+    shareX.href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(url);
+    shareLine.href = 'https://line.me/R/msg/text/?' + encodeURIComponent(text + '\n' + url);
+    shareFb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url) + '&quote=' + encodeURIComponent(text);
+    shareHatena.href = 'https://b.hatena.ne.jp/entry/panel/?url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(text);
+  }
+
+  function render() {
+    var monthlyWage = Math.max(0, Number(monthlyWageInput.value) || 0);
+    var annualIncome = Math.max(0, Number(annualIncomeInput.value) || 0);
+    var ageGroup = ageGroupInput.value;
+    var householdSize = Math.max(1, Math.floor(Number(householdInput.value) || 1));
+
+    var nini = ninikeizoku(monthlyWage, ageGroup);
+    var kh = kokuho(annualIncome, ageGroup, householdSize);
+
+    var niniIsCheaper = nini < kh.monthlyAvg;
+    var diff = Math.abs(nini - kh.monthlyAvg);
+
+    summaryCards.innerHTML =
+      '<div class="summary-card' + (niniIsCheaper ? ' best' : '') + '"><div class="label">任意継続（月額）</div><div class="value">' + yen(nini) + '</div><div class="sub">全額自己負担・上限32万円で計算</div></div>' +
+      '<div class="summary-card' + (!niniIsCheaper ? ' best' : '') + '"><div class="label">国民健康保険（月額目安）</div><div class="value">' + yen(kh.monthlyAvg) + '</div><div class="sub">年額' + yen(kh.annualTotal) + 'を12等分</div></div>' +
+      '<div class="summary-card"><div class="label">差額</div><div class="value">' + yen(diff) + '</div><div class="sub">' + (niniIsCheaper ? '任意継続の方が安い' : '国民健康保険の方が安い') + '</div></div>';
+
+    resultBody.innerHTML =
+      '<tr><td>月額保険料</td><td class="num">' + yen(nini) + '</td><td class="num">' + yen(kh.monthlyAvg) + '</td></tr>' +
+      '<tr><td>内訳（年額）</td><td class="num">' + yen(nini * 12) + '</td><td class="num">医療' + yen(kh.iryo) + ' + 支援金' + yen(kh.shien) + (kh.kaigo > 0 ? ' + 介護' + yen(kh.kaigo) : '') + ' + 子育て支援金' + yen(kh.kosodate) + '</td></tr>';
+
+    var shareText = '退職後の健康保険を比較したら\n' +
+      '任意継続: ' + yen(nini) + '/月、国民健康保険: ' + yen(kh.monthlyAvg) + '/月でした\n\n' +
+      '退職後の健康保険 比較シミュレーター';
+    setShareLinks(shareText, 'https://webtools-labs.com/taishokugo-hoken-hikaku-keisan/');
+  }
+
+  monthlyWageInput.addEventListener('input', render);
+  annualIncomeInput.addEventListener('input', render);
+  ageGroupInput.addEventListener('change', render);
+  householdInput.addEventListener('input', render);
+
+  render();
+
+  var WEB3FORMS_ACCESS_KEY = '4551c9fd-4327-4bd4-97e0-8b93d85fd077';
+  var contactForm = document.getElementById('contactForm');
+  var contactStatus = document.getElementById('contactStatus');
+  var contactSubmit = document.getElementById('contactSubmit');
+
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    contactSubmit.disabled = true;
+    contactStatus.textContent = '送信中...';
+    contactStatus.className = 'contact-status';
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_ACCESS_KEY,
+        subject: '退職後の健康保険 比較シミュレーターへのお問い合わせ',
+        email: document.getElementById('contactEmail').value || 'noreply@example.com',
+        message: document.getElementById('contactMessage').value
+      })
+    }).then(function (res) { return res.json(); }).then(function (data) {
+      contactSubmit.disabled = false;
+      if (data.success) {
+        contactStatus.textContent = '送信しました。ありがとうございます！';
+        contactStatus.className = 'contact-status ok';
+        contactForm.reset();
+      } else {
+        contactStatus.textContent = '送信に失敗しました。時間をおいて再度お試しください。';
+        contactStatus.className = 'contact-status err';
+      }
+    }).catch(function () {
+      contactSubmit.disabled = false;
+      contactStatus.textContent = '送信に失敗しました。時間をおいて再度お試しください。';
+      contactStatus.className = 'contact-status err';
+    });
+  });
+})();
+</script>
+</body>
+</html>
