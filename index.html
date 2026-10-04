@@ -260,7 +260,7 @@ footer.site-footer a { color: var(--accent); }
   <header class="masthead">
     <h1>退職後の健康保険 比較シミュレーター</h1>
     <p class="lede">退職時の給与・前年の年収・年齢・家族の人数を入れるだけで、退職後の「国民健康保険」と「任意継続」の保険料を月額換算で比較します。</p>
-    <span class="updated-note">料率 最終確認日: 2026年9月27日（協会けんぽ・東京都特別区の令和8年度料率にもとづく）</span>
+    <span class="updated-note">料率 最終確認日: 2026年10月4日（協会けんぽ・東京都特別区の令和8年度料率にもとづく。国保は前年＝令和7年の所得で計算）</span>
   </header>
 
   <div class="notice-box">
@@ -342,7 +342,7 @@ footer.site-footer a { color: var(--accent); }
       <table>
         <thead><tr><th>項目</th><th class="num">任意継続</th><th class="num">国民健康保険</th></tr></thead>
         <tbody>
-          <tr><td>算定の基準</td><td class="num">標準報酬月額30万円</td><td class="num">給与所得217.6万円（400万円−給与所得控除−基礎控除43万円）</td></tr>
+          <tr><td>算定の基準</td><td class="num">標準報酬月額30万円</td><td class="num">算定基礎額233万円（給与所得276万円−基礎控除43万円）</td></tr>
           <tr class="best"><td>月額の目安</td><td class="num">30,240円</td><td class="num">26,132円</td></tr>
         </tbody>
       </table>
@@ -455,8 +455,9 @@ footer.site-footer a { color: var(--accent); }
 (function () {
   function yen(n) { return Math.round(n).toLocaleString('ja-JP') + '円'; }
 
+  // 国保（令和8年度）は前年＝令和7年の所得で計算するため、令和7年分の給与所得控除（最低保障額65万円）を使う（2026-10-04修正。以前は令和8年分の74万円を使っていた）
   function salaryDeduction(income) {
-    if (income <= 2200000) return 740000;
+    if (income <= 1900000) return Math.min(income, 650000);
     if (income <= 3600000) return Math.round(income * 0.3 + 80000);
     if (income <= 6600000) return Math.round(income * 0.2 + 440000);
     if (income <= 8500000) return Math.round(income * 0.1 + 1100000);
