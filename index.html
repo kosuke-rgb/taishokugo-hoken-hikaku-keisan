@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>退職後の健康保険 比較シミュレーター | 国民健康保険 vs 任意継続</title>
-<meta name="description" content="退職時の給与・前年の年収・年齢・家族の人数を入れるだけで、退職後の「国民健康保険」と「任意継続」の保険料を月額換算で比較できる無料シミュレーターです。どちらが安いかの目安がすぐ分かります。">
+<title>退職後の健康保険 比較シミュレーター｜国保と任意継続どっちが安い？【扶養・会社都合の軽減にも対応】</title>
+<meta name="description" content="退職時の給与・前年の年収・年齢・家族の人数を入れるだけで、退職後の「国民健康保険」と「任意継続」の保険料を月額で比較できる無料シミュレーター。会社都合退職の国保軽減（所得を30%とみなす）にも対応し、家族の扶養に入れる条件や2年目の保険料も解説しています。">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://webtools-labs.com/taishokugo-hoken-hikaku-keisan/">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2370765779014113" crossorigin="anonymous"></script>
@@ -31,7 +31,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="webtools-labs">
-<meta property="og:title" content="退職後の健康保険 比較シミュレーター | 国民健康保険 vs 任意継続">
+<meta property="og:title" content="退職後の健康保険 比較シミュレーター｜国保と任意継続どっちが安い？【扶養・会社都合の軽減にも対応】">
 <meta property="og:description" content="退職時の給与・前年の年収・年齢・家族の人数から、国民健康保険と任意継続の保険料を月額換算で比較できます。">
 <meta property="og:url" content="https://webtools-labs.com/taishokugo-hoken-hikaku-keisan/">
 <meta property="og:image" content="https://webtools-labs.com/taishokugo-hoken-hikaku-keisan/og-image.png">
@@ -88,6 +88,21 @@
       "@type": "Question",
       "name": "任意継続でも傷病手当金はもらえますか？",
       "acceptedAnswer": { "@type": "Answer", "text": "いいえ、任意継続被保険者の期間中に新たに発症した病気・ケガについては、原則として傷病手当金は支給されません（国民健康保険も同様です）。ただし、退職前から継続して受給していた傷病手当金は、資格喪失後も条件を満たせば継続して受け取れる場合があります。詳しくは傷病手当金計算ツールもあわせてご確認ください。" }
+    },
+    {
+      "@type": "Question",
+      "name": "退職後、家族の扶養に入ることはできますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "今後1年間の収入の見込みが130万円未満（60歳以上・障害者は180万円未満、19歳以上23歳未満は150万円未満）など、家族が加入している健康保険の条件を満たせば扶養に入れます。扶養に入ると本人の保険料はかかりません。ただし失業保険の基本手当日額が3,612円以上の場合、受給中は扶養に入れないのが一般的です。" }
+    },
+    {
+      "@type": "Question",
+      "name": "会社都合で退職すると国民健康保険料は安くなりますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "倒産・解雇・雇い止めなどで雇用保険の特定受給資格者・特定理由離職者にあたる65歳未満の人は、前年の給与所得を30%とみなして国民健康保険料を計算する軽減制度があります。離職日の翌日が属する月から翌年度末まで適用され、市区町村での申請が必要です。" }
+    },
+    {
+      "@type": "Question",
+      "name": "2年目は国民健康保険と任意継続のどちらが安いですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "国民健康保険の2年目の保険料は、退職した年の所得で計算されるため、1年目より安くなることが多いです。任意継続は原則として2年間同じ保険料です。1年目は任意継続、2年目に国民健康保険へ切り替える方法もあるので、2年目の国保の保険料が分かった時点で比較し直すのがおすすめです。" }
     }
   ]
 }
@@ -261,7 +276,7 @@ footer.site-footer a { color: var(--accent); }
   <header class="masthead">
     <h1>退職後の健康保険 比較シミュレーター</h1>
     <p class="lede">退職時の給与・前年の年収・年齢・家族の人数を入れるだけで、退職後の「国民健康保険」と「任意継続」の保険料を月額換算で比較します。</p>
-    <span class="updated-note">料率 最終確認日: 2026年10月4日（協会けんぽ・東京都特別区の令和8年度料率にもとづく。国保は前年＝令和7年の所得で計算）</span>
+    <span class="updated-note">料率 最終確認日: 2026年10月9日（協会けんぽ・東京都特別区の令和8年度料率にもとづく。国保は前年＝令和7年の所得で計算）</span>
     <p class="ad-disclosure" style="font-size:0.75rem;opacity:0.7;margin:0.5rem 0 0;">※当サイトはアフィリエイト広告（PR）を利用しています。</p>
   </header>
 
@@ -300,6 +315,7 @@ footer.site-footer a { color: var(--accent); }
         <input type="number" id="household" min="1" step="1" value="1">
       </div>
     </div>
+    <label style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.9rem;margin:0 0 1.25rem;"><input type="checkbox" id="involuntary" style="width:1.1rem;height:1.1rem;margin-top:0.25rem;accent-color:var(--accent);"><span>会社都合（倒産・解雇・雇い止めなど）で退職した（65歳未満で、雇用保険の特定受給資格者・特定理由離職者にあたる場合。国保は前年の給与所得を30%として計算する軽減制度があります）</span></label>
 
     <div class="summary-cards" id="summaryCards"></div>
 
@@ -311,7 +327,7 @@ footer.site-footer a { color: var(--accent); }
         <tbody id="resultBody"></tbody>
       </table>
     </div>
-    <p class="disclaimer">任意継続は「退職時の標準報酬月額」と「協会けんぽ全被保険者の平均標準報酬月額（令和8年度は32万円）」の低い方に、東京都の健康保険料率＋子ども・子育て支援金率（＋40〜64歳は介護保険料率）をかけて計算しています（全額自己負担）。国民健康保険は前年の年収から給与所得控除・基礎控除43万円を引いた金額をもとに、東京都特別区の医療分・支援金分・介護分・子ども子育て支援金分の令和8年度料率で計算し、年額を12で割った月額目安を表示しています。</p>
+    <p class="disclaimer">任意継続は「退職時の標準報酬月額」と「協会けんぽ全被保険者の平均標準報酬月額（令和8年度は32万円）」の低い方に、東京都の健康保険料率＋子ども・子育て支援金率（＋40〜64歳は介護保険料率）をかけて計算しています（全額自己負担）。国民健康保険は前年の年収から給与所得控除・基礎控除43万円を引いた金額をもとに、東京都特別区の医療分・支援金分・介護分・子ども子育て支援金分の令和8年度料率で計算し、年額を12で割った月額目安を表示しています。「会社都合で退職した」にチェックを入れると、前年の給与所得を30%とみなして計算します。所得が低い世帯の均等割の軽減（7割・5割・2割）は考慮していないため、実際の国民健康保険料はこれより安くなる場合があります。</p>
     <div class="share-row" id="shareRow">
       <a class="share-btn share-x" id="shareX" href="#" target="_blank" rel="noopener">𝕏でシェア</a>
       <a class="share-btn share-line" id="shareLine" href="#" target="_blank" rel="noopener">LINEで送る</a>
@@ -335,6 +351,24 @@ footer.site-footer a { color: var(--accent); }
       </table>
     </div>
     <p class="disclaimer">保障される医療の自己負担割合（原則3割）自体はどちらも変わりません。傷病手当金・出産手当金は、任意継続・国民健康保険のどちらでも新規の支給対象外です。</p>
+  </section>
+
+  <section>
+    <h2>3つ目の選択肢: 家族の健康保険の扶養に入る</h2>
+    <p>退職後の選択肢は「国民健康保険」「任意継続」のほかに、<strong>家族（配偶者や親など）が加入している健康保険の扶養に入る</strong>方法があります。扶養に入れば、本人の保険料は0円です。</p>
+    <p>協会けんぽの場合、扶養に入れるのは、今後1年間の収入の見込みが<strong>130万円未満</strong>（60歳以上または障害者は180万円未満、19歳以上23歳未満は150万円未満）で、同居なら家族（被保険者）の収入の半分未満であることが目安です。失業保険（基本手当）を受け取っている間は、<strong>日額3,612円以上</strong>だと年収130万円以上の見込みとみなされ、受給中は扶養に入れません（受給前の待機期間・給付制限の期間は入れる場合があります）。基準は健康保険組合によって異なるため、家族の勤務先に確認してください。</p>
+  </section>
+
+  <section>
+    <h2>会社都合で退職した場合は、国民健康保険が大きく軽減される</h2>
+    <p>倒産・解雇・雇い止めなど会社都合で退職し、雇用保険の「特定受給資格者」または「特定理由離職者」にあたる65歳未満の人は、国民健康保険料の計算で<strong>前年の給与所得を30%とみなす</strong>軽減制度があります。期間は、離職日の翌日が属する月から翌年度末までです。</p>
+    <p>たとえば前年の年収400万円（給与所得276万円）なら、保険料の計算に使う所得が約83万円になり、国民健康保険の方が任意継続より安くなるケースが多くなります。軽減を受けるには、雇用保険受給資格者証（離職理由コード）を持って市区町村の窓口で申請が必要です。上の計算フォームの「会社都合で退職した」にチェックを入れると、この軽減を反映した目安が分かります。</p>
+  </section>
+
+  <section>
+    <h2>2年目は保険料が変わる</h2>
+    <p>国民健康保険は「前年の所得」で計算するため、退職した翌年度（2年目）は、退職した年の所得（働いた期間の給与だけ）をもとに計算され、多くの場合1年目より安くなります。一方、任意継続の保険料は原則として2年間変わりません（協会けんぽの料率や上限の改定があった場合を除く）。</p>
+    <p>そのため「1年目は任意継続、2年目は国民健康保険に切り替える」という選び方もあります。任意継続は本人の申出でやめられるので（令和4年1月から）、2年目の国民健康保険料の通知が来たら、改めて比較するのがおすすめです。</p>
   </section>
 
   <section>
@@ -398,6 +432,18 @@ footer.site-footer a { color: var(--accent); }
     <details class="faq-item">
       <summary>任意継続でも傷病手当金はもらえますか？</summary>
       <p>いいえ、任意継続被保険者の期間中に新たに発症した病気・ケガについては、原則として傷病手当金は支給されません（国民健康保険も同様です）。ただし、退職前から継続して受給していた傷病手当金は、資格喪失後も条件を満たせば継続して受け取れる場合があります。詳しくは<a href="https://webtools-labs.com/shoubyou-teate-keisan/">傷病手当金計算ツール</a>もあわせてご確認ください。</p>
+    </details>
+    <details class="faq-item">
+      <summary>退職後、家族の扶養に入ることはできますか？</summary>
+      <p>今後1年間の収入の見込みが130万円未満（60歳以上・障害者は180万円未満、19歳以上23歳未満は150万円未満）など、家族が加入している健康保険の条件を満たせば扶養に入れます。扶養に入ると本人の保険料はかかりません。ただし失業保険の基本手当日額が3,612円以上の場合、受給中は扶養に入れないのが一般的です。</p>
+    </details>
+    <details class="faq-item">
+      <summary>会社都合で退職すると国民健康保険料は安くなりますか？</summary>
+      <p>倒産・解雇・雇い止めなどで雇用保険の特定受給資格者・特定理由離職者にあたる65歳未満の人は、前年の給与所得を30%とみなして国民健康保険料を計算する軽減制度があります。離職日の翌日が属する月から翌年度末まで適用され、市区町村での申請が必要です。</p>
+    </details>
+    <details class="faq-item">
+      <summary>2年目は国民健康保険と任意継続のどちらが安いですか？</summary>
+      <p>国民健康保険の2年目の保険料は、退職した年の所得で計算されるため、1年目より安くなることが多いです。任意継続は原則として2年間同じ保険料です。1年目は任意継続、2年目に国民健康保険へ切り替える方法もあるので、2年目の国保の保険料が分かった時点で比較し直すのがおすすめです。</p>
     </details>
   </section>
 
@@ -478,9 +524,11 @@ footer.site-footer a { color: var(--accent); }
     return Math.round(capped * rate);
   }
 
-  function kokuho(annualIncome, ageGroup, householdSize) {
+  // involuntary: 非自発的失業者の軽減（前年の給与所得を30/100とみなす。厚生労働省の制度、離職日の翌日の月から翌年度末まで）
+  function kokuho(annualIncome, ageGroup, householdSize, involuntary) {
     var income = Math.max(0, annualIncome);
     var salaryIncome = Math.max(0, income - salaryDeduction(income));
+    if (involuntary) salaryIncome = Math.floor(salaryIncome * 0.3);
     var base = Math.max(0, salaryIncome - 430000);
     var iryo = Math.min(base * 0.0751 + 47600 * householdSize, 670000);
     var shien = Math.min(base * 0.0280 + 17600 * householdSize, 260000);
@@ -498,6 +546,7 @@ footer.site-footer a { color: var(--accent); }
   var annualIncomeInput = document.getElementById('annualIncome');
   var ageGroupInput = document.getElementById('ageGroup');
   var householdInput = document.getElementById('household');
+  var involuntaryInput = document.getElementById('involuntary');
   var summaryCards = document.getElementById('summaryCards');
   var resultBody = document.getElementById('resultBody');
   var shareX = document.getElementById('shareX');
@@ -517,16 +566,17 @@ footer.site-footer a { color: var(--accent); }
     var annualIncome = Math.max(0, Number(annualIncomeInput.value) || 0);
     var ageGroup = ageGroupInput.value;
     var householdSize = Math.max(1, Math.floor(Number(householdInput.value) || 1));
+    var involuntary = involuntaryInput.checked;
 
     var nini = ninikeizoku(monthlyWage, ageGroup);
-    var kh = kokuho(annualIncome, ageGroup, householdSize);
+    var kh = kokuho(annualIncome, ageGroup, householdSize, involuntary);
 
     var niniIsCheaper = nini < kh.monthlyAvg;
     var diff = Math.abs(nini - kh.monthlyAvg);
 
     summaryCards.innerHTML =
       '<div class="summary-card' + (niniIsCheaper ? ' best' : '') + '"><div class="label">任意継続（月額）</div><div class="value">' + yen(nini) + '</div><div class="sub">全額自己負担・上限32万円で計算</div></div>' +
-      '<div class="summary-card' + (!niniIsCheaper ? ' best' : '') + '"><div class="label">国民健康保険（月額目安）</div><div class="value">' + yen(kh.monthlyAvg) + '</div><div class="sub">年額' + yen(kh.annualTotal) + 'を12等分</div></div>' +
+      '<div class="summary-card' + (!niniIsCheaper ? ' best' : '') + '"><div class="label">国民健康保険（月額目安）</div><div class="value">' + yen(kh.monthlyAvg) + '</div><div class="sub">年額' + yen(kh.annualTotal) + 'を12等分' + (involuntary ? '（会社都合の軽減を適用）' : '') + '</div></div>' +
       '<div class="summary-card"><div class="label">差額</div><div class="value">' + yen(diff) + '</div><div class="sub">' + (niniIsCheaper ? '任意継続の方が安い' : '国民健康保険の方が安い') + '</div></div>';
 
     resultBody.innerHTML =
@@ -543,6 +593,7 @@ footer.site-footer a { color: var(--accent); }
   annualIncomeInput.addEventListener('input', render);
   ageGroupInput.addEventListener('change', render);
   householdInput.addEventListener('input', render);
+  involuntaryInput.addEventListener('change', render);
 
   render();
 
