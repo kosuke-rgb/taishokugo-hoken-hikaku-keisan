@@ -213,7 +213,7 @@ tr.total td { font-weight: 700; }
 tr.total { background: var(--best-bg); }
 
 .ref-table { overflow-x: auto; }
-.ref-table table { width: 100%; border-collapse: collapse; font-size: 0.86rem; min-width: 460px; }
+.ref-table table { width: 100%; border-collapse: collapse; font-size: 0.86rem; min-width: 0; }
 .ref-table th, .ref-table td { padding: 0.5rem 0.5rem; border-bottom: 1px solid var(--line); text-align: left; }
 .ref-table td.num { font-variant-numeric: tabular-nums; text-align: right; }
 .ref-table tr.best td { background: var(--best-bg); font-weight: 700; }
@@ -293,6 +293,15 @@ footer.site-footer a { color: var(--accent); }
 .breadcrumb { font-size: 0.78rem; color: var(--muted); margin-bottom: 1.1rem; }
 .breadcrumb a { color: var(--accent); text-decoration: none; }
 .breadcrumb a:hover { text-decoration: underline; }
+/* スマホで表が画面からはみ出さないように（2026-11-17） */
+@media (max-width: 600px) {
+  .ref-table table { font-size: 0.8rem; }
+  .ref-table th, .ref-table td { padding: 0.45rem 0.3rem; }
+  .ref-table th, .ref-table td:first-child { white-space: normal; }
+  .ref-table td.nw { white-space: nowrap; }
+  .ref-table th:first-child, .ref-table td:first-child { min-width: 5em; position: sticky; left: 0; z-index: 1; background: var(--bg); box-shadow: 1px 0 0 var(--line); }
+  .ref-table tr.best td:first-child, .ref-table tr.total td:first-child, .ref-table tr.next td:first-child, .ref-table tr.highlight td:first-child { background: var(--best-bg, var(--bg)); }
+}
 </style>
 </head>
 <body>
@@ -399,13 +408,13 @@ footer.site-footer a { color: var(--accent); }
       <table style="white-space:nowrap">
         <thead><tr><th>前年の年収</th><th class="num">任意継続</th><th class="num">国保<br>本人のみ</th><th class="num">国保<br>家族3人</th><th class="num">国保 会社都合<br>本人のみ</th><th>本人のみで<br>安い方</th></tr></thead>
         <tbody>
-          <tr><td>200万円</td><td class="num">16,800円</td><td class="num">13,436円</td><td class="num">24,615円</td><td class="num">5,589円</td><td>国保</td></tr>
-          <tr><td>300万円</td><td class="num">25,200円</td><td class="num">19,608円</td><td class="num">30,787円</td><td class="num">7,141円</td><td>国保</td></tr>
-          <tr><td>400万円</td><td class="num">32,256円</td><td class="num">26,132円</td><td class="num">37,311円</td><td class="num">9,099円</td><td>国保</td></tr>
-          <tr><td>500万円</td><td class="num">32,256円</td><td class="num">33,186円</td><td class="num">44,364円</td><td class="num">11,215円</td><td>任意継続</td></tr>
-          <tr><td>600万円</td><td class="num">32,256円</td><td class="num">40,239円</td><td class="num">51,418円</td><td class="num">13,331円</td><td>任意継続</td></tr>
-          <tr><td>800万円</td><td class="num">32,256円</td><td class="num">55,580円</td><td class="num">66,759円</td><td class="num">17,933円</td><td>任意継続</td></tr>
-          <tr><td>1000万円</td><td class="num">32,256円</td><td class="num">72,772円</td><td class="num">79,683円</td><td class="num">23,091円</td><td>任意継続</td></tr>
+          <tr><td>200万円</td><td class="num nw">16,800円</td><td class="num nw">13,436円</td><td class="num nw">24,615円</td><td class="num nw">5,589円</td><td>国保</td></tr>
+          <tr><td>300万円</td><td class="num nw">25,200円</td><td class="num nw">19,608円</td><td class="num nw">30,787円</td><td class="num nw">7,141円</td><td>国保</td></tr>
+          <tr><td>400万円</td><td class="num nw">32,256円</td><td class="num nw">26,132円</td><td class="num nw">37,311円</td><td class="num nw">9,099円</td><td>国保</td></tr>
+          <tr><td>500万円</td><td class="num nw">32,256円</td><td class="num nw">33,186円</td><td class="num nw">44,364円</td><td class="num nw">11,215円</td><td>任意継続</td></tr>
+          <tr><td>600万円</td><td class="num nw">32,256円</td><td class="num nw">40,239円</td><td class="num nw">51,418円</td><td class="num nw">13,331円</td><td>任意継続</td></tr>
+          <tr><td>800万円</td><td class="num nw">32,256円</td><td class="num nw">55,580円</td><td class="num nw">66,759円</td><td class="num nw">17,933円</td><td>任意継続</td></tr>
+          <tr><td>1000万円</td><td class="num nw">32,256円</td><td class="num nw">72,772円</td><td class="num nw">79,683円</td><td class="num nw">23,091円</td><td>任意継続</td></tr>
         </tbody>
       </table>
     </div>
@@ -419,12 +428,12 @@ footer.site-footer a { color: var(--accent); }
       <table style="white-space:nowrap">
         <thead><tr><th>地域</th><th class="num">協会けんぽの<br>健康保険料率</th><th class="num">国保<br>年収300万円</th><th class="num">国保<br>年収400万円</th><th class="num">国保<br>年収600万円</th><th class="num">任意継続<br>（上限）</th><th class="num">任意継続が安く<br>なる前年の年収</th></tr></thead>
         <tbody>
-          <tr><td>東京23区</td><td class="num">9.85%</td><td class="num">19,608円</td><td class="num">26,132円</td><td class="num">40,239円</td><td class="num">32,256円</td><td class="num"><strong>約490万円</strong></td></tr>
-          <tr><td>大阪市（大阪府内）</td><td class="num">10.13%</td><td class="num">24,744円</td><td class="num">32,662円</td><td class="num">49,782円</td><td class="num">33,152円</td><td class="num"><strong>約410万円</strong></td></tr>
-          <tr><td>横浜市</td><td class="num">9.92%</td><td class="num">19,628円</td><td class="num">26,590円</td><td class="num">41,643円</td><td class="num">32,480円</td><td class="num"><strong>約480万円</strong></td></tr>
-          <tr><td>名古屋市</td><td class="num">9.93%</td><td class="num">21,149円</td><td class="num">28,346円</td><td class="num">43,906円</td><td class="num">32,512円</td><td class="num"><strong>約455万円</strong></td></tr>
-          <tr><td>札幌市</td><td class="num">10.28%</td><td class="num">21,145円</td><td class="num">28,212円</td><td class="num">43,492円</td><td class="num">33,632円</td><td class="num"><strong>約475万円</strong></td></tr>
-          <tr><td>福岡市</td><td class="num">10.11%</td><td class="num">16,983円</td><td class="num">22,533円</td><td class="num">34,533円</td><td class="num">33,088円</td><td class="num"><strong>約580万円</strong></td></tr>
+          <tr><td>東京23区</td><td class="num nw">9.85%</td><td class="num nw">19,608円</td><td class="num nw">26,132円</td><td class="num nw">40,239円</td><td class="num nw">32,256円</td><td class="num"><strong>約490万円</strong></td></tr>
+          <tr><td>大阪市（大阪府内）</td><td class="num nw">10.13%</td><td class="num nw">24,744円</td><td class="num nw">32,662円</td><td class="num nw">49,782円</td><td class="num nw">33,152円</td><td class="num"><strong>約410万円</strong></td></tr>
+          <tr><td>横浜市</td><td class="num nw">9.92%</td><td class="num nw">19,628円</td><td class="num nw">26,590円</td><td class="num nw">41,643円</td><td class="num nw">32,480円</td><td class="num"><strong>約480万円</strong></td></tr>
+          <tr><td>名古屋市</td><td class="num nw">9.93%</td><td class="num nw">21,149円</td><td class="num nw">28,346円</td><td class="num nw">43,906円</td><td class="num nw">32,512円</td><td class="num"><strong>約455万円</strong></td></tr>
+          <tr><td>札幌市</td><td class="num nw">10.28%</td><td class="num nw">21,145円</td><td class="num nw">28,212円</td><td class="num nw">43,492円</td><td class="num nw">33,632円</td><td class="num"><strong>約475万円</strong></td></tr>
+          <tr><td>福岡市</td><td class="num nw">10.11%</td><td class="num nw">16,983円</td><td class="num nw">22,533円</td><td class="num nw">34,533円</td><td class="num nw">33,088円</td><td class="num"><strong>約580万円</strong></td></tr>
         </tbody>
       </table>
     </div>
@@ -489,7 +498,7 @@ footer.site-footer a { color: var(--accent); }
         <thead><tr><th>項目</th><th class="num">任意継続</th><th class="num">国民健康保険</th></tr></thead>
         <tbody>
           <tr><td>算定の基準</td><td class="num">標準報酬月額30万円</td><td class="num">算定基礎額233万円（給与所得276万円−基礎控除43万円）</td></tr>
-          <tr class="best"><td>月額の目安</td><td class="num">30,240円</td><td class="num">26,132円</td></tr>
+          <tr class="best"><td>月額の目安</td><td class="num nw">30,240円</td><td class="num nw">26,132円</td></tr>
         </tbody>
       </table>
     </div>
