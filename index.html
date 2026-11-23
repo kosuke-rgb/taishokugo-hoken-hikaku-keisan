@@ -302,6 +302,17 @@ footer.site-footer a { color: var(--accent); }
   .ref-table th:first-child, .ref-table td:first-child { min-width: 5em; position: sticky; left: 0; z-index: 1; background: var(--bg); box-shadow: 1px 0 0 var(--line); }
   .ref-table tr.best td:first-child, .ref-table tr.total td:first-child, .ref-table tr.next td:first-child, .ref-table tr.highlight td:first-child { background: var(--best-bg, var(--bg)); }
 }
+/* スマホでは横長の早見表をカード表示に（2026-11-23） */
+@media (max-width: 600px) {
+  .ref-table table.stack, .ref-table table.stack tbody, .ref-table table.stack tr, .ref-table table.stack td { display: block; width: auto; }
+  .ref-table table.stack thead { display: none; }
+  .ref-table table.stack tr { border: 1px solid var(--line); border-radius: 8px; margin: 0 0 0.6rem; padding: 0.35rem 0.7rem; }
+  .ref-table table.stack td { display: flex; justify-content: space-between; align-items: baseline; gap: 0.8rem; border: 0; padding: 0.22rem 0; text-align: right; position: static; box-shadow: none; min-width: 0; background: none; font-size: 0.86rem; white-space: normal; }
+  .ref-table table.stack td > span { text-align: right; white-space: nowrap; }
+  .ref-table table.stack td::before { content: attr(data-label); color: var(--muted); text-align: left; font-weight: 400; flex: 1 1 auto; }
+  .ref-table table.stack td:first-child { display: block; text-align: left; font-weight: 700; border-bottom: 1px solid var(--line); padding-bottom: 0.35rem; margin-bottom: 0.2rem; }
+  .ref-table table.stack td:first-child::before { content: none; }
+}
 </style>
 </head>
 <body>
@@ -405,16 +416,16 @@ footer.site-footer a { color: var(--accent); }
     <h2>年収別早見表: 任意継続と国民健康保険、どっちが安い？</h2>
     <p>前年の年収ごとに、任意継続と国民健康保険（東京都特別区）の月額保険料の目安を並べました。<strong>本人だけが加入する場合、前年の年収がおおむね490万円を超えると任意継続の方が安く</strong>なります。任意継続は保険料の上限（標準報酬月額32万円）があり、年収がそれ以上増えても保険料が月32,256円で止まるためです。</p>
     <div class="ref-table" style="overflow-x:auto">
-      <table style="white-space:nowrap">
+      <table class="stack" style="white-space:nowrap">
         <thead><tr><th>前年の年収</th><th class="num">任意継続</th><th class="num">国保<br>本人のみ</th><th class="num">国保<br>家族3人</th><th class="num">国保 会社都合<br>本人のみ</th><th>本人のみで<br>安い方</th></tr></thead>
         <tbody>
-          <tr><td>200万円</td><td class="num nw">16,800円</td><td class="num nw">13,436円</td><td class="num nw">24,615円</td><td class="num nw">5,589円</td><td>国保</td></tr>
-          <tr><td>300万円</td><td class="num nw">25,200円</td><td class="num nw">19,608円</td><td class="num nw">30,787円</td><td class="num nw">7,141円</td><td>国保</td></tr>
-          <tr><td>400万円</td><td class="num nw">32,256円</td><td class="num nw">26,132円</td><td class="num nw">37,311円</td><td class="num nw">9,099円</td><td>国保</td></tr>
-          <tr><td>500万円</td><td class="num nw">32,256円</td><td class="num nw">33,186円</td><td class="num nw">44,364円</td><td class="num nw">11,215円</td><td>任意継続</td></tr>
-          <tr><td>600万円</td><td class="num nw">32,256円</td><td class="num nw">40,239円</td><td class="num nw">51,418円</td><td class="num nw">13,331円</td><td>任意継続</td></tr>
-          <tr><td>800万円</td><td class="num nw">32,256円</td><td class="num nw">55,580円</td><td class="num nw">66,759円</td><td class="num nw">17,933円</td><td>任意継続</td></tr>
-          <tr><td>1000万円</td><td class="num nw">32,256円</td><td class="num nw">72,772円</td><td class="num nw">79,683円</td><td class="num nw">23,091円</td><td>任意継続</td></tr>
+          <tr><td data-label="前年の年収">200万円</td><td class="num nw" data-label="任意継続"><span>16,800円</span></td><td class="num nw" data-label="国保（本人のみ）"><span>13,436円</span></td><td class="num nw" data-label="国保（家族3人）"><span>24,615円</span></td><td class="num nw" data-label="国保（会社都合・本人のみ）"><span>5,589円</span></td><td data-label="本人のみで安い方"><span>国保</span></td></tr>
+          <tr><td data-label="前年の年収">300万円</td><td class="num nw" data-label="任意継続"><span>25,200円</span></td><td class="num nw" data-label="国保（本人のみ）"><span>19,608円</span></td><td class="num nw" data-label="国保（家族3人）"><span>30,787円</span></td><td class="num nw" data-label="国保（会社都合・本人のみ）"><span>7,141円</span></td><td data-label="本人のみで安い方"><span>国保</span></td></tr>
+          <tr><td data-label="前年の年収">400万円</td><td class="num nw" data-label="任意継続"><span>32,256円</span></td><td class="num nw" data-label="国保（本人のみ）"><span>26,132円</span></td><td class="num nw" data-label="国保（家族3人）"><span>37,311円</span></td><td class="num nw" data-label="国保（会社都合・本人のみ）"><span>9,099円</span></td><td data-label="本人のみで安い方"><span>国保</span></td></tr>
+          <tr><td data-label="前年の年収">500万円</td><td class="num nw" data-label="任意継続"><span>32,256円</span></td><td class="num nw" data-label="国保（本人のみ）"><span>33,186円</span></td><td class="num nw" data-label="国保（家族3人）"><span>44,364円</span></td><td class="num nw" data-label="国保（会社都合・本人のみ）"><span>11,215円</span></td><td data-label="本人のみで安い方"><span>任意継続</span></td></tr>
+          <tr><td data-label="前年の年収">600万円</td><td class="num nw" data-label="任意継続"><span>32,256円</span></td><td class="num nw" data-label="国保（本人のみ）"><span>40,239円</span></td><td class="num nw" data-label="国保（家族3人）"><span>51,418円</span></td><td class="num nw" data-label="国保（会社都合・本人のみ）"><span>13,331円</span></td><td data-label="本人のみで安い方"><span>任意継続</span></td></tr>
+          <tr><td data-label="前年の年収">800万円</td><td class="num nw" data-label="任意継続"><span>32,256円</span></td><td class="num nw" data-label="国保（本人のみ）"><span>55,580円</span></td><td class="num nw" data-label="国保（家族3人）"><span>66,759円</span></td><td class="num nw" data-label="国保（会社都合・本人のみ）"><span>17,933円</span></td><td data-label="本人のみで安い方"><span>任意継続</span></td></tr>
+          <tr><td data-label="前年の年収">1000万円</td><td class="num nw" data-label="任意継続"><span>32,256円</span></td><td class="num nw" data-label="国保（本人のみ）"><span>72,772円</span></td><td class="num nw" data-label="国保（家族3人）"><span>79,683円</span></td><td class="num nw" data-label="国保（会社都合・本人のみ）"><span>23,091円</span></td><td data-label="本人のみで安い方"><span>任意継続</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -425,15 +436,15 @@ footer.site-footer a { color: var(--accent); }
     <h2>地域別の比較: 国民健康保険料と任意継続の上限額</h2>
     <p>国民健康保険料は住んでいる市区町村によって大きく変わります。本人だけが加入する40歳未満の場合の、国保の月額の目安と、任意継続の上限額（標準報酬月額32万円の場合）を地域ごとに並べました。</p>
     <div class="ref-table" style="overflow-x:auto">
-      <table style="white-space:nowrap">
+      <table class="stack" style="white-space:nowrap">
         <thead><tr><th>地域</th><th class="num">協会けんぽの<br>健康保険料率</th><th class="num">国保<br>年収300万円</th><th class="num">国保<br>年収400万円</th><th class="num">国保<br>年収600万円</th><th class="num">任意継続<br>（上限）</th><th class="num">任意継続が安く<br>なる前年の年収</th></tr></thead>
         <tbody>
-          <tr><td>東京23区</td><td class="num nw">9.85%</td><td class="num nw">19,608円</td><td class="num nw">26,132円</td><td class="num nw">40,239円</td><td class="num nw">32,256円</td><td class="num"><strong>約490万円</strong></td></tr>
-          <tr><td>大阪市（大阪府内）</td><td class="num nw">10.13%</td><td class="num nw">24,744円</td><td class="num nw">32,662円</td><td class="num nw">49,782円</td><td class="num nw">33,152円</td><td class="num"><strong>約410万円</strong></td></tr>
-          <tr><td>横浜市</td><td class="num nw">9.92%</td><td class="num nw">19,628円</td><td class="num nw">26,590円</td><td class="num nw">41,643円</td><td class="num nw">32,480円</td><td class="num"><strong>約480万円</strong></td></tr>
-          <tr><td>名古屋市</td><td class="num nw">9.93%</td><td class="num nw">21,149円</td><td class="num nw">28,346円</td><td class="num nw">43,906円</td><td class="num nw">32,512円</td><td class="num"><strong>約455万円</strong></td></tr>
-          <tr><td>札幌市</td><td class="num nw">10.28%</td><td class="num nw">21,145円</td><td class="num nw">28,212円</td><td class="num nw">43,492円</td><td class="num nw">33,632円</td><td class="num"><strong>約475万円</strong></td></tr>
-          <tr><td>福岡市</td><td class="num nw">10.11%</td><td class="num nw">16,983円</td><td class="num nw">22,533円</td><td class="num nw">34,533円</td><td class="num nw">33,088円</td><td class="num"><strong>約580万円</strong></td></tr>
+          <tr><td data-label="地域">東京23区</td><td class="num nw" data-label="協会けんぽの健康保険料率"><span>9.85%</span></td><td class="num nw" data-label="国保（年収300万円）"><span>19,608円</span></td><td class="num nw" data-label="国保（年収400万円）"><span>26,132円</span></td><td class="num nw" data-label="国保（年収600万円）"><span>40,239円</span></td><td class="num nw" data-label="任意継続（上限）"><span>32,256円</span></td><td class="num" data-label="任意継続が安くなる前年の年収"><span><strong>約490万円</strong></span></td></tr>
+          <tr><td data-label="地域">大阪市（大阪府内）</td><td class="num nw" data-label="協会けんぽの健康保険料率"><span>10.13%</span></td><td class="num nw" data-label="国保（年収300万円）"><span>24,744円</span></td><td class="num nw" data-label="国保（年収400万円）"><span>32,662円</span></td><td class="num nw" data-label="国保（年収600万円）"><span>49,782円</span></td><td class="num nw" data-label="任意継続（上限）"><span>33,152円</span></td><td class="num" data-label="任意継続が安くなる前年の年収"><span><strong>約410万円</strong></span></td></tr>
+          <tr><td data-label="地域">横浜市</td><td class="num nw" data-label="協会けんぽの健康保険料率"><span>9.92%</span></td><td class="num nw" data-label="国保（年収300万円）"><span>19,628円</span></td><td class="num nw" data-label="国保（年収400万円）"><span>26,590円</span></td><td class="num nw" data-label="国保（年収600万円）"><span>41,643円</span></td><td class="num nw" data-label="任意継続（上限）"><span>32,480円</span></td><td class="num" data-label="任意継続が安くなる前年の年収"><span><strong>約480万円</strong></span></td></tr>
+          <tr><td data-label="地域">名古屋市</td><td class="num nw" data-label="協会けんぽの健康保険料率"><span>9.93%</span></td><td class="num nw" data-label="国保（年収300万円）"><span>21,149円</span></td><td class="num nw" data-label="国保（年収400万円）"><span>28,346円</span></td><td class="num nw" data-label="国保（年収600万円）"><span>43,906円</span></td><td class="num nw" data-label="任意継続（上限）"><span>32,512円</span></td><td class="num" data-label="任意継続が安くなる前年の年収"><span><strong>約455万円</strong></span></td></tr>
+          <tr><td data-label="地域">札幌市</td><td class="num nw" data-label="協会けんぽの健康保険料率"><span>10.28%</span></td><td class="num nw" data-label="国保（年収300万円）"><span>21,145円</span></td><td class="num nw" data-label="国保（年収400万円）"><span>28,212円</span></td><td class="num nw" data-label="国保（年収600万円）"><span>43,492円</span></td><td class="num nw" data-label="任意継続（上限）"><span>33,632円</span></td><td class="num" data-label="任意継続が安くなる前年の年収"><span><strong>約475万円</strong></span></td></tr>
+          <tr><td data-label="地域">福岡市</td><td class="num nw" data-label="協会けんぽの健康保険料率"><span>10.11%</span></td><td class="num nw" data-label="国保（年収300万円）"><span>16,983円</span></td><td class="num nw" data-label="国保（年収400万円）"><span>22,533円</span></td><td class="num nw" data-label="国保（年収600万円）"><span>34,533円</span></td><td class="num nw" data-label="任意継続（上限）"><span>33,088円</span></td><td class="num" data-label="任意継続が安くなる前年の年収"><span><strong>約580万円</strong></span></td></tr>
         </tbody>
       </table>
     </div>
